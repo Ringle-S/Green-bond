@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Bond</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./asset/plant.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- top container -->
+
+      <nav class="navbar-2">
+        <div class="nav-brand">
+          <img src="./asset/logo.svg" alt="" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li>
+            <a class="dropdown">
+              <a onclick="myFunction()" class="dropbtn">
+                Resources <i class="bi bi-chevron-down"></i
+              ></a>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">Fertilizers</a>
+                <a href="#">Saplings</a>
+                <a href="#">Tutorials</a>
+              </div>
+            </a>
+          </li>
+          <li><a class="active" href="./contact.html">Contact</a></li>
+        </ul>
+        <ul class="nav-icon">
+          <div class="line"></div>
+          <li>
+            <button id="navbtn" type="button">
+              <img src="./asset/Menu.svg" alt="" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- mobile nav -->
+      <ul class="mobile-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li>
+          <a href="#">Resources <img src="./asset/chev-down.svg" alt="" /></a>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <div class="contact-banner">
+        <h1>Contact US</h1>
+      </div>
+      <!-- form container -->
+      <div class="form-container">
+        <div class="left-container animate-on-scroll">
+          <span>Contact us</span>
+          <h1>Get in touch today</h1>
+          <p>
+            If any of these fields are left empty, the form will not be
+            submitted, and an error message can be displayed
+          </p>
+          <form id="myForm" action="" onsubmit="return validation(event)">
+            <div class="form-input">
+              <input
+                type="text"
+                name=""
+                id="userName"
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <div class="form-input">
+              <input
+                type="email"
+                novalidate
+                name=""
+                id="userMail"
+                placeholder="Enter Your E mail"
+              />
+            </div>
+            <div class="form-input">
+              <textarea
+                name=""
+                id="textContent"
+                cols="30"
+                rows="4"
+                placeholder="Enter something"
+              ></textarea>
+            </div>
+            <span class="message msgRemove">This is a danger message!</span>
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        <div class="right-container">
+          <div class="back-img">
+            <img src="./asset/form-img.png " class="form-img" alt="" />
+          </div>
+        </div>
+      </div>
+      <a
+        style="text-decoration: none"
+        id="insta-container"
+        target="_blank"
+        href="https://www.instagram.com/accounts/login/?hl=en"
+        class="insta-container"
+      >
+        <img src="./asset/unsta.png" alt="" />
+        <p>Stay update with special offers, plant-parenting tips, and more.</p>
+      </a>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.1944328198005!2d78.21906941906177!3d9.700002396462251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00df8ca7523e51%3A0x640eb44df9cf8a1f!2sVDL%20VIDIYAL%20INDUSTRIAL%20ESTATE!5e0!3m2!1sen!2sin!4v1721467184468!5m2!1sen!2sin"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <!-- footer -->
+      <footer>
+        <div class="footer-row">
+          <div class="footer-logo">
+            <img src="./asset/logo.svg" alt="" />
+          </div>
+          <ul class="links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://gitlab.com/users/sign_in"
+                ><i class="bi bi-gitlab"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.threads.net/?hl=en"
+                ><i class="bi bi-threads"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://x.com/i/flow/login"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://medium.com/"
+                ><i class="bi bi-medium"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-line"></div>
+        <div class="copyright">
+          Copyright © 2023 Plant bond | All Rights Reserved
+        </div>
+      </footer>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
