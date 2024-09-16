@@ -146,9 +146,9 @@ function validation(event) {
   }
 
   function validEmail(checkemail) {
-    const emailRegex =
-      /^(?![!]?\d)[a-zA-Z0-9]+[a-zA-Z0-9._-]*@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
-    return emailRegex.test(checkemail);
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(checkemail).toLowerCase());
   }
 
   function validSentence(checkTextArea) {
@@ -210,6 +210,7 @@ accordianItem.forEach((accItem, index) => {
   accItem.addEventListener("click", () => {
     accordianItem.forEach((otherItem, index) => {
       otherItem.classList.remove("active");
+      accBtn[index].style.transform = `rotate(0deg)`;
       accBtn[index].innerHTML = `<i class="bi bi-plus-lg"></i>`;
     });
 

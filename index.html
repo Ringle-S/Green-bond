@@ -54,10 +54,23 @@
 
         <!-- mobile nav -->
         <ul class="mobile-nav">
-          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li>
-            <a href="#">Resources <img src="./asset/chev-down.svg" alt="" /></a>
+            <a class="dropdown">
+              <a onclick="myFunction()" class="dropbtn">
+                Resources <i class="bi bi-chevron-down"></i
+              ></a>
+              <div
+                id="myDropdown"
+                class="dropdown-content"
+                style="z-index: 100"
+              >
+                <a href="#">Fertilizers</a>
+                <a href="#">Saplings</a>
+                <a href="#">Tutorials</a>
+              </div>
+            </a>
           </li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
