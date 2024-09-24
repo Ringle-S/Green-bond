@@ -24,6 +24,7 @@ li {
 #navbtn {
   background-color: transparent;
   border: 0;
+  display: none;
 }
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
@@ -104,17 +105,18 @@ li {
 }
 
 header {
+}
+.banner-container {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #dce0c8;
-  padding-right: 100px;
-  position: relative;
+
+  /* position: relative; */
   margin: 0;
 }
-
 nav {
   width: 100%;
   height: 100px;
@@ -127,7 +129,7 @@ nav {
   padding: 0 80px;
   background-color: #dce0c8;
   padding-right: 100px;
-  position: relative;
+  /* position: relative; */
   margin: 0;
 }
 
@@ -137,7 +139,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0%;
   padding: 0 80px;
@@ -254,8 +256,8 @@ iframe {
   height: 50vh;
   padding: 50px;
   background-repeat: no-repeat;
-  background-position: contain;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
   background-image: url("./asset/shipabout.png");
 }
 .ship-container h2 {
@@ -273,8 +275,6 @@ ul {
   width: 2px;
   height: 40px;
   background-color: #2a2a2a;
-}
-#insta-container {
 }
 
 li > a {
@@ -810,8 +810,9 @@ p {
   font-weight: 600;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center !important;
   padding: 0px 20px;
+  gap: 10px;
   background-color: #244629;
 }
 .count > button {
@@ -892,7 +893,9 @@ input[type="number"]::-webkit-outer-spin-button {
   top: 12%;
   left: -80%;
 }
-
+.form-img {
+  /* width: 100%; */
+}
 .left-container {
   width: 40%;
 }
@@ -1161,11 +1164,31 @@ footer {
     -o-transform: translate(0, 0); */
 }
 
+@media only screen and (max-width: 1700px) {
+  .form-img {
+    width: 500px;
+  }
+  .back-img > img {
+    left: -120px;
+  }
+}
 @media only screen and (max-width: 1440px) {
+  .nav-brand > img {
+    width: 200px;
+  }
+  .nav-links {
+    gap: 15px;
+    font-size: 20px;
+  }
   #speciesName {
     font-size: 50px;
   }
-
+  .content-col {
+    padding-left: 40px;
+  }
+  .top-left {
+    padding-left: 40px;
+  }
   #speciesDesc {
     font-size: 15px;
   }
@@ -1178,6 +1201,7 @@ footer {
     transition: all 1s ease-out;
     transition-delay: 500ms;
     transform: translate(-300, 0px);
+    margin-right: 40px;
   }
 
   .back-img > img {
@@ -1192,10 +1216,23 @@ footer {
   .mobile-nav {
     top: 13vh;
   }
-  header {
-    padding-right: 0%;
+  .swiper-card {
+    margin: 80px 0;
   }
+  .swiper-1 > img {
+    width: 300px;
+    height: 500px;
+  }
+  .plant-cards-container {
+    grid-template-columns: 428px 428px;
+  }
+  /* header {
+    padding-right: 0%;
+  } */
   /* about container */
+  .accordian-container {
+    padding: 50px 15%;
+  }
   .about-banner {
     background-image: url("./asset/aboutban.png");
     width: 100%;
@@ -1266,12 +1303,56 @@ footer {
     height: 50vh;
 
     background-repeat: no-repeat;
-    background-position: contain;
-    background-size: contain;
+    background-position: right;
+    background-size: cover;
     background-image: url("./asset/shipabout.png");
+    background-blend-mode: overlay;
+    background-color: #ffffff65;
+  }
+  footer {
+    padding: 30px 30px;
+  }
+  .top-left {
+    padding-left: 40px;
+  }
+
+  .content-col {
+    width: 80%;
+    padding-left: 40px;
+  }
+
+  .count-species {
+    margin-top: 40px;
+  }
+
+  #bannerImg {
+    width: 500px;
+    margin-right: 0px;
+  }
+  .footer-logo img {
+    width: 200px;
+  }
+  .about-ship {
+    margin-bottom: 80px;
+  }
+  .right-container {
+    display: none;
+  }
+  .left-container {
+    width: 60%;
+  }
+  .form-container {
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 1024px) {
+  .swiper-1 > img {
+    width: 200px;
+    height: 350px;
+  }
+  .banner-container {
+    padding: 0% 10%;
+  }
   .navbar {
     padding: 0 30px;
   }
@@ -1283,7 +1364,7 @@ footer {
     height: 24px;
   }
   header {
-    padding-right: 20px;
+    padding-right: 0px;
   }
   #bannerImg {
     margin-right: 20px;
@@ -1339,7 +1420,7 @@ footer {
     width: 200px;
   }
   .ship-container {
-    display: none;
+    /* display: none; */
   }
   .interior-container {
     flex-direction: column;
@@ -1354,7 +1435,7 @@ footer {
     display: none;
   }
   .plant-cards-container {
-    grid-template-columns: 448px 448px;
+    grid-template-columns: 400px 400px;
   }
   .map-container {
     padding: 50px 10%;
@@ -1394,9 +1475,28 @@ footer {
     width: 500px;
     margin-right: 0px;
   }
+  .about-ship {
+    margin-bottom: 80px;
+  }
 }
 @media only screen and (max-width: 1000px) {
-  /* conat */
+  .swiper-card {
+    width: 90%;
+  }
+  .lastmid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-container {
+    padding: 0%;
+  }
+  #navbtn {
+    display: block;
+  }
+  .logbtn {
+    display: none;
+  }
   .map-container {
     padding: 100px 18%;
     display: flex;
@@ -1427,9 +1527,6 @@ footer {
     text-align: center;
   }
 
-  .links {
-    flex-direction: column;
-  }
   /* about container */
   .about-banner {
     background-image: url("./asset/aboutban.png");
@@ -1446,7 +1543,7 @@ footer {
   .about-blog {
     display: flex;
     flex-direction: column-reverse;
-    padding: 100px 5%;
+    padding: 50px 5%;
     gap: 50px;
   }
   .about-left-blog h2 {
@@ -1469,7 +1566,7 @@ footer {
     justify-content: center;
   }
   .about-middle {
-    padding: 100px 10%;
+    padding: 50px 10%;
   }
   .about-middle-container {
     background-image: url("./asset/aboutmiddle.png");
@@ -1502,19 +1599,25 @@ footer {
   }
   .ship-container {
     width: 100%;
-    height: 20vh;
-
+    height: 50vh;
     background-repeat: no-repeat;
-    background-position: contain;
-    background-size: contain;
+    background-position: left;
+    background-size: cover;
     background-image: url("./asset/shipabout.png");
+    background-blend-mode: normal !important;
+    background-color: #00000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   nav {
     padding: 0 40px;
   }
-  header {
+  .banner-container {
     flex-direction: column-reverse;
-    height: 140vh;
+    height: 120vh;
     gap: 20px;
     align-items: center;
     padding-right: 0%;
@@ -1524,12 +1627,13 @@ footer {
   }
 
   .top-left {
-    padding-left: 40px;
+    padding-left: 0px;
+    text-align: center;
   }
 
   .content-col {
-    width: 80%;
-    padding-left: 40px;
+    width: 100%;
+    padding: 0px 5%;
   }
 
   .count-species {
@@ -1537,7 +1641,8 @@ footer {
   }
 
   #bannerImg {
-    width: 500px;
+    width: 400px;
+    height: 400px;
     margin-right: 0px;
   }
 
@@ -1682,9 +1787,33 @@ footer {
   .accordian-header > p {
     font-size: 16px;
   }
+  .about-ship {
+    margin-bottom: 50px;
+  }
 }
 
 @media only screen and (max-width: 770px) {
+  .swiper-card {
+    width: 95%;
+  }
+  .swiper-1 > img {
+    width: 200px;
+    height: 300px;
+  }
+  #blog-btn {
+    align-self: center;
+  }
+  .map-container {
+    padding: 50px 10%;
+  }
+  .left-container > p {
+    font-size: 16px !important;
+  }
+  .lastmid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .nav-brand {
     width: 100px;
   }
@@ -1697,7 +1826,9 @@ footer {
   .nav-brand > img {
     width: 150px;
   }
-
+  .banner-container {
+    height: 100vh;
+  }
   nav {
     padding: 0 16px;
   }
@@ -1744,7 +1875,8 @@ footer {
   }
 
   #bannerImg {
-    width: 350px;
+    width: 300px;
+    height: 300px;
   }
 
   /* interior container */
@@ -1772,9 +1904,13 @@ footer {
     font-size: 18px;
     text-align: center;
   }
-
+  .insta-container {
+    padding: 50px 5%;
+  }
   /* decor container */
-
+  .ship-container h2 {
+    font-size: 28px;
+  }
   .decor-container {
     padding: 0px 16px;
   }
@@ -1796,7 +1932,7 @@ footer {
   }
 
   .border {
-    width: 315px;
+    width: 350px;
     height: 272px;
   }
 
@@ -1856,7 +1992,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 16px;
+    margin: 50px 16px;
   }
 
   .left-container > span {
@@ -1933,13 +2069,21 @@ footer {
     text-align: center;
     font-size: 14px;
   }
+  .left-container {
+    width: 80%;
+  }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 500px) {
+  .left-container {
+    width: 100%;
+  }
   .nav-brand {
     width: 100px;
   }
-
+  .swipe-container h1 {
+    font-size: 28px;
+  }
   .nav-brand > img {
     width: 150px;
   }
@@ -1995,7 +2139,7 @@ footer {
 
   /* interior container */
   .interior-container {
-    height: 1150px;
+    height: fit-content;
     justify-content: end;
     padding: 0px 16px;
   }
@@ -2036,13 +2180,15 @@ footer {
   .decor-card {
     gap: 40px;
   }
-
+  .card-img {
+    width: 280px !important;
+  }
   .card {
-    width: 340px;
+    width: 280px;
   }
 
   .border {
-    width: 315px;
+    width: 280px;
     height: 272px;
   }
 

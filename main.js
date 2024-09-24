@@ -35,7 +35,7 @@ navBtn.addEventListener("click", () => {
 const plantSpecies = [
   [
     "Cactus Plants",
-    "Cras tincidunt lobortis feugiat vivamus at morbi leo urna molestie atole elementum eu facilisis faucibus interdum posuere .Cras tincidunt lobortis feugiat vivamus at morbi le",
+    "The flowers like begonia, nerine only bloom in the autumn season ; and the flowers like tulip and iris only bloom in the spring season.",
     3652,
     51814,
     "cactus.png",
@@ -49,7 +49,7 @@ const plantSpecies = [
   ],
   [
     "Herbs Plants",
-    "Cras tincidunt lobortis feugiat vivamus at morbi leo urna molestie atole elementum eu facilisis faucibus interdum posuere .Cras tincidunt lobortis feugiat vivamus at morbi le",
+    " Herbs are the leaf part of a plant that is used in cooking - these can be used fresh or dried. Any other part of the plant, which is usually dried, is referred to as a spice.",
     93654,
     75567,
     "herb.png",
@@ -62,8 +62,8 @@ const plantSpecies = [
     "flower.png",
   ],
   [
-    "Pot Decor Plants",
-    "Cras tincidunt lobortis feugiat vivamus at morbi leo urna molestie atole elementum eu facilisis faucibus interdum posuere .Cras tincidunt lobortis feugiat vivamus at morbi le",
+    "Decor Plants",
+    " Caring for a cactus at home can be therapeutic and may benefit individuals who have experienced trauma. Cacti also have a psychological effect, reducing anxiety and stress.",
     5486,
     65487,
     "pot.png",
@@ -77,6 +77,36 @@ let speciesDesc = document.getElementById("speciesDesc");
 let speciesCount = document.getElementById("speciesCount");
 let buyerCount = document.getElementById("buyerCount");
 let imgDiv = document.getElementById("bannerImg");
+function loopThroughArrays(arrayOfArrays) {
+  let currentIndex = 0;
+  let currentArrayIndex = 0;
+
+  const intervalId = setInterval(() => {
+    if (currentIndex >= arrayOfArrays[currentArrayIndex].length) {
+      currentIndex = 0;
+      currentArrayIndex++;
+      speciesName.innerHTML = arrayOfArrays[currentArrayIndex][0];
+      speciesDesc.innerHTML = arrayOfArrays[currentArrayIndex][1];
+      speciesCount.innerHTML = arrayOfArrays[currentArrayIndex][2];
+      buyerCount.innerHTML = arrayOfArrays[currentArrayIndex][3];
+      imgDiv.setAttribute(
+        "src",
+        `./asset/${arrayOfArrays[currentArrayIndex][4]}`
+      );
+      imgDiv.classList.add("animate");
+      if (currentArrayIndex >= arrayOfArrays.length) {
+        clearInterval(intervalId);
+        return;
+      }
+    }
+
+    const currentElement = arrayOfArrays[currentArrayIndex][currentIndex];
+    console.log(currentElement); // Do something with the current element
+
+    currentIndex++;
+  }, 700); // Adjust the interval time (milliseconds) as needed
+}
+loopThroughArrays(plantSpecies);
 
 bannerBtn.forEach((plantbtn, index) => {
   plantbtn.addEventListener("click", function () {
@@ -102,23 +132,23 @@ const countValue = document.querySelectorAll("#countValue");
 const buyBtn = document.querySelectorAll(".buy-btn");
 const sucBtn = document.querySelector(".success-modal");
 const sucCloseBtn = document.querySelector("#suc-close");
-let count = 0;
+let count = 1;
 
 modalBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     modalBox[index].classList.remove("hidden");
     closeBtn[index].addEventListener("click", () => {
       modalBox[index].classList.add("hidden");
-      count = 0;
+      count = 1;
       countValue[index].value = count;
     });
     increQuantity[index].addEventListener("click", () => {
       count += 1;
-      countValue[index].value = count;
+      countValue[index].value = count >= 10 ? 10 : count;
     });
     decreQuantity[index].addEventListener("click", () => {
       count -= 1;
-      countValue[index].value = count;
+      countValue[index].value = count <= 1 ? 1 : count;
     });
     buyBtn[index].addEventListener("click", () => {
       modalBox[index].classList.add("hidden");
