@@ -1173,6 +1173,21 @@ footer {
   }
 }
 @media only screen and (max-width: 1440px) {
+  .card {
+    width: 300px;
+  }
+  .card-img-one {
+    width: 300px;
+  }
+  .card-img-two {
+    width: 300px;
+  }
+  .card-img-three {
+    width: 300px;
+  }
+  .border {
+    width: 300px;
+  }
   .nav-brand > img {
     width: 200px;
   }
@@ -1343,6 +1358,11 @@ footer {
   }
   .form-container {
     justify-content: center;
+  }
+}
+@media only screen and (max-width: 1124px) {
+  .decor-card {
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1526,7 +1546,9 @@ footer {
     font-weight: 600;
     text-align: center;
   }
-
+  .accordian-body > p {
+    font-size: 20px;
+  }
   /* about container */
   .about-banner {
     background-image: url("./asset/aboutban.png");
@@ -1793,6 +1815,9 @@ footer {
 }
 
 @media only screen and (max-width: 770px) {
+  .danger {
+    width: 380px;
+  }
   .swiper-card {
     width: 95%;
   }
@@ -2075,6 +2100,9 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+  .danger {
+    width: 300px;
+  }
   .left-container {
     width: 100%;
   }
@@ -2324,5 +2352,17 @@ footer {
   .copyright {
     text-align: center;
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .count-species {
+    width: 80%;
+  }
+  #speciesCount {
+    font-size: 24px;
+  }
+  #buyerCount {
+    font-size: 24px;
   }
 }

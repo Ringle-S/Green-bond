@@ -1,231 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Bond</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Bond</title>
+  <link rel="stylesheet" href="./style.css" />
+  <!-- <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
     /> -->
-    <!-- Swiper CSS -->
-    <link rel="shortcut icon" href="./asset/plant.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-    />
-  </head>
+  <!-- Swiper CSS -->
+  <link rel="shortcut icon" href="./asset/plant.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+</head>
 
-  <body>
-    <div class="container">
-      <!-- top container -->
-      <header>
-        <nav class="navbar">
-          <div class="nav-brand">
-            <img src="./asset/logo.svg" alt="" />
-          </div>
-          <ul class="nav-links">
-            <li><a class="active" href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li>
-              <a class="dropdown">
-                <a onclick="myFunction()" class="dropbtn">
-                  Resources <i class="bi bi-chevron-down"></i
-                ></a>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">Fertilizers</a>
-                  <a href="#">Saplings</a>
-                  <a href="#">Tutorials</a>
-                </div>
-              </a>
-            </li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-          <ul class="nav-icon">
-            <div class="line"></div>
-            <li>
-              <a href="" class="logbtn">Login</a>
-              <button id="navbtn" type="button">
-                <img src="./asset/Menu.svg" alt="" />
-              </button>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- mobile nav -->
-        <ul class="mobile-nav">
+<body>
+  <div class="container">
+    <!-- top container -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand">
+          <img src="./asset/logo.svg" alt="" />
+        </div>
+        <ul class="nav-links">
           <li><a class="active" href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
-
+          <li>
+            <a class="dropdown">
+              <a onclick="myFunction()" class="dropbtn">
+                Resources <i class="bi bi-chevron-down"></i></a>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">Fertilizers</a>
+                <a href="#">Saplings</a>
+                <a href="#">Tutorials</a>
+              </div>
+            </a>
+          </li>
           <li><a href="./contact.html">Contact</a></li>
-          <li><a href="">Login</a></li>
         </ul>
-      </header>
-
-      <!-- banner -->
-      <div class="banner-container">
-        <div class="top-left">
-          <div class="btn-list">
-            <button id="btnAcc" type="button">Cactus</button>
-            <button id="btnAcc" type="button">Climbers</button>
-            <button id="btnAcc" type="button">Herbs</button>
-            <button id="btnAcc" type="button">Flowers</button>
-            <button id="btnAcc" type="button">Pot Plants</button>
-          </div>
-          <div class="content-col">
-            <h1 id="speciesName" class="animate-on-scroll">Cactus Plants</h1>
-            <p id="speciesDesc" class="animate-on-scroll">
-              The flowers like begonia, nerine only bloom in the autumn season ;
-              and the flowers like tulip and iris only bloom in the spring
-              season.
-            </p>
-            <button type="button" class="animate-down-up" id="changeSpecies">
-              Explore Now
+        <ul class="nav-icon">
+          <div class="line"></div>
+          <li>
+            <a href="" class="logbtn">Login</a>
+            <button id="navbtn" type="button">
+              <img src="./asset/Menu.svg" alt="" />
             </button>
-            <div class="count-species">
-              <div
-                class="species animate-down-up"
-                style="
+          </li>
+        </ul>
+      </nav>
+
+      <!-- mobile nav -->
+      <ul class="mobile-nav">
+        <li><a class="active" href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </header>
+
+    <!-- banner -->
+    <div class="banner-container">
+      <div class="top-left">
+        <div class="btn-list">
+          <button id="btnAcc" type="button">Cactus</button>
+          <button id="btnAcc" type="button">Climbers</button>
+          <button id="btnAcc" type="button">Herbs</button>
+          <button id="btnAcc" type="button">Flowers</button>
+          <button id="btnAcc" type="button">Pot Plants</button>
+        </div>
+        <div class="content-col">
+          <h1 id="speciesName" class="animate-on-scroll">Cactus Plants</h1>
+          <p id="speciesDesc" class="animate-on-scroll">
+            The flowers like begonia, nerine only bloom in the autumn season ;
+            and the flowers like tulip and iris only bloom in the spring
+            season.
+          </p>
+          <button type="button" class="animate-down-up" id="changeSpecies">
+            Explore Now
+          </button>
+          <div class="count-species">
+            <div class="species animate-down-up" style="
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                   gap: 10px;
-                "
-              >
-                <h1 id="speciesCount">3652</h1>
-                <span>Species</span>
-              </div>
-              <div
-                class="buyers animate-down-up"
-                style="
+                ">
+              <h1 id="speciesCount">3652</h1>
+              <span>Species</span>
+            </div>
+            <div class="buyers animate-down-up" style="
                   display: flex;
                   flex-direction: column;
                   align-items: center;
                   gap: 10px;
-                "
-              >
-                <h1 id="buyerCount">51814</h1>
-                <span>Buyers</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <img
-          id="bannerImg"
-          class="animate-on-scroll-right"
-          src="./asset/cactus.png"
-          alt=""
-        />
-      </div>
-      <!-- Interior container -->
-      <div class="interior-container">
-        <div class="interior-left animate-down-up">
-          <div class="row">
-            <img
-              class="left-img animate-on-scroll"
-              src="./asset/interior-one.png"
-              alt=""
-            />
-            <img
-              class="left-img animate-on-scroll"
-              src="./asset/interior-two.png"
-              alt=""
-            />
-          </div>
-          <div class="row">
-            <img class="bottom-img" src="./asset/interior-three.png" alt="" />
-          </div>
-        </div>
-        <div class="interior-right">
-          <h1 class="animate-on-scroll-right">PLANTS IN THE INTERIOR</h1>
-          <p class="animate-on-scroll-right">
-            How To Use Plants In The Interior
-          </p>
-          <p class="animate-on-scroll-right">
-            Plants are as important as other accessories in the space.
-            Well-chosen plants — artfully displayed — enhance your home’s unique
-            look and make it feel healthier and more connected with nature.
-          </p>
-          <button class="btn animate-down-up" type="button">Read More</button>
-        </div>
-      </div>
-
-      <!-- Decor container -->
-      <div class="decor-container">
-        <h1 class="decor-head-one animate-on-scroll">WELL-MADE & WELL-LOVED</h1>
-        <h1 class="decor-head-two animate-on-scroll-right">
-          Furniture & Decor
-        </h1>
-        <div class="decor-card">
-          <div class="card decor-one animate-on-scroll">
-            <div class="card-img card-img-one">
-              <div class="border"></div>
-            </div>
-            <div class="card-content">
-              <h4>Indoor Plants</h4>
-              <p>
-                Plants are as important as other accessories in the space.
-                Well-chosen plants 
-              </p>
-              <button id="decor-btn" type="button">Read More</button>
-            </div>
-          </div>
-          <div class="card decor-two animate-down-up">
-            <div class="card-content">
-              <h4>Air Cleaner Plants</h4>
-              <p>
-                Plants are as important as other accessories in the space.
-                Well-chosen plants 
-              </p>
-              <button id="decor-btn" type="button">Read More</button>
-            </div>
-            <div class="card-img card-img-two">
-              <div class="border"></div>
-            </div>
-          </div>
-          <div class="card decor-three animate-on-scroll-right">
-            <div class="card-img card-img-three">
-              <div class="border"></div>
-            </div>
-            <div class="card-content">
-              <h4>Home Decor</h4>
-              <p>
-                Plants are as important as other accessories in the space.
-                Well-chosen plants 
-              </p>
-              <button id="decor-btn" type="button">Read More</button>
+                ">
+              <h1 id="buyerCount">51814</h1>
+              <span>Buyers</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- middle banner -->
-      <div class="middle-container">
-        <div class="banner-content">
-          <h2>Nurseries Near You</h2>
-          <p>
-            Plants are as important as other accessories in the space.
-            Well-chosen plants 
-          </p>
-          <a class="btn banner-btn" href="#">Locate</a>
+      <img id="bannerImg" class="animate-on-scroll-right" src="./asset/cactus.png" alt="" />
+    </div>
+    <!-- Interior container -->
+    <div class="interior-container">
+      <div class="interior-left animate-down-up">
+        <div class="row">
+          <img class="left-img animate-on-scroll" src="./asset/interior-one.png" alt="" />
+          <img class="left-img animate-on-scroll" src="./asset/interior-two.png" alt="" />
+        </div>
+        <div class="row">
+          <img class="bottom-img" src="./asset/interior-three.png" alt="" />
         </div>
       </div>
+      <div class="interior-right">
+        <h1 class="animate-on-scroll-right">PLANTS IN THE INTERIOR</h1>
+        <p class="animate-on-scroll-right">
+          How To Use Plants In The Interior
+        </p>
+        <p class="animate-on-scroll-right">
+          Plants are as important as other accessories in the space.
+          Well-chosen plants — artfully displayed — enhance your home’s unique
+          look and make it feel healthier and more connected with nature.
+        </p>
+        <button class="btn animate-down-up" type="button">Read More</button>
+      </div>
+    </div>
 
-      <!-- product container -->
+    <!-- Decor container -->
+    <div class="decor-container">
+      <h1 class="decor-head-one animate-on-scroll">WELL-MADE & WELL-LOVED</h1>
+      <h1 class="decor-head-two animate-on-scroll-right">
+        Furniture & Decor
+      </h1>
+      <div class="decor-card">
+        <div class="card decor-one animate-on-scroll">
+          <div class="card-img card-img-one">
+            <div class="border"></div>
+          </div>
+          <div class="card-content">
+            <h4>Indoor Plants</h4>
+            <p>
+              Plants are as important as other accessories in the space.
+              Well-chosen plants 
+            </p>
+            <button id="decor-btn" type="button">Read More</button>
+          </div>
+        </div>
+        <div class="card decor-two animate-down-up">
+          <div class="card-content">
+            <h4>Air Cleaner Plants</h4>
+            <p>
+              Plants are as important as other accessories in the space.
+              Well-chosen plants 
+            </p>
+            <button id="decor-btn" type="button">Read More</button>
+          </div>
+          <div class="card-img card-img-two">
+            <div class="border"></div>
+          </div>
+        </div>
+        <div class="card decor-three animate-on-scroll-right">
+          <div class="card-img card-img-three">
+            <div class="border"></div>
+          </div>
+          <div class="card-content">
+            <h4>Home Decor</h4>
+            <p>
+              Plants are as important as other accessories in the space.
+              Well-chosen plants 
+            </p>
+            <button id="decor-btn" type="button">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="modal-container">
-        <h1>Popular Product</h1>
-        <div class="plant-cards-container">
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-one.png " alt="" />
+    <!-- middle banner -->
+    <div class="middle-container">
+      <div class="banner-content">
+        <h2>Nurseries Near You</h2>
+        <p>
+          Plants are as important as other accessories in the space.
+          Well-chosen plants 
+        </p>
+        <a class="btn banner-btn" href="#">Locate</a>
+      </div>
+    </div>
+
+    <!-- product container -->
+
+    <div class="modal-container">
+      <h1>Popular Product</h1>
+      <div class="plant-cards-container">
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-one.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Arrowhead Plant</h2>
+              <p>Syngonium Podophylium</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Arrowhead Plant</h2>
-                <p>Syngonium Podophylium</p>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;20</h1>
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-two.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Peace Lily</h2>
+              <p>Spathiphyllum</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+            </div>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;15</h1>
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-three.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Fiddle Leaf Fig.</h2>
+              <p>Ficus lyratalium</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+            </div>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;19</h1>
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-four.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Asparagaceae</h2>
+              <p>Dracaena Trifasciata</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+            </div>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;17</h1>
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-five.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Golden Cane Palm</h2>
+              <p>Dypsis Lutescens</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+            </div>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;14</h1>
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="card-plant animate-down-up">
+          <div class="card-img">
+            <img src="./asset/plant-six.png " alt="" />
+          </div>
+          <div class="plant-content">
+            <div class="col-card">
+              <h2>Birds of Paradise</h2>
+              <p>Strelitzia Nicolai</p>
+              <span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </span>
+            </div>
+            <div class="col-card">
+              <i class="bi bi-heart"></i>
+              <h1>&#8377;08</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-dialog modal-one hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-one.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Arrowhead Plant</h1>
+                <p>Syngonium Podophyllum</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -234,19 +347,78 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;20</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-two.png " alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  Syngonium podophyllum, commonly called arrowhead vine, is
+                  the only plant native from Mexico to Ecuador. Syngonium
+                  podophyllum, commonly called arrowhead vine, is the only
+                  plant native from Mexico to Ecuador. Readmore
+                </p>
+              </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Peace Lily</h2>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
+              </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;20</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <h5>Quantity</h5>
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog modal-two hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-two.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Peace Lily</h1>
                 <p>Spathiphyllum</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
@@ -256,20 +428,78 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;15</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-three.png " alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  Peace Lilies are not only aesthetically pleasing but also
+                  have air-purifying qualities. They thrive in low light
+                  conditions, making them a great choice for home or office
+                  environments
+                </p>
+              </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Fiddle Leaf Fig.</h2>
-                <p>Ficus lyratalium</p>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
+              </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;15</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog modal-three hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-three.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Fiddle Leaf Fig.</h1>
+                <p>Ficus lyrata</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
                   <i class="bi bi-star-fill"></i>
@@ -278,19 +508,77 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;19</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-four.png " alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  Syngonium podophyllum, commonly called arrowhead vine, is
+                  the only plant native from Mexico to Ecuador. Syngonium
+                  podophyllum, commonly called arrowhead vine, is the only
+                  plant native from Mexico to Ecuador. Readmore
+                </p>
+              </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Asparagaceae</h2>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
+              </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;18</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog modal-four hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-four.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Asparagaceae</h1>
                 <p>Dracaena Trifasciata</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
@@ -300,19 +588,77 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;17</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-five.png " alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  It is a popular indoor plant known for its large, glossy
+                  green leaves and distinctive lyre or fiddle-like shape.
+                  Ficus lyrata is native to western Africa but is cultivated
+                  worldwide as an ornamental plant.e
+                </p>
+              </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Golden Cane Palm</h2>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
+              </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;17</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog modal-five hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-five.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Golden Cane</h1>
                 <p>Dypsis Lutescens</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
@@ -322,19 +668,77 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;14</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-          <div id="modal" class="card-plant animate-down-up">
-            <div class="card-img">
-              <img src="./asset/plant-six.png " alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  Syngonium podophyllum, commonly called arrowhead vine, is
+                  the only plant native from Mexico to Ecuador. Syngonium
+                  podophyllum, commonly called arrowhead vine, is the only
+                  plant native from Mexico to Ecuador. Readmore
+                </p>
+              </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
             </div>
-            <div class="plant-content">
-              <div class="col-card">
-                <h2>Birds of Paradise</h2>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
+              </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
+              </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;14</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-dialog modal-six hidden">
+          <div class="modal-left">
+            <span><img src="./asset/cart.svg" alt="" /></span>
+            <div class="modal-img">
+              <img src="./asset/plant-six.png" alt="" />
+            </div>
+            <div class="modal-row">
+              <div class="modal-name">
+                <h1>Birds of Paradise</h1>
                 <p>Strelitzia Nicolai</p>
                 <span>
                   <i class="bi bi-star-fill"></i>
@@ -344,497 +748,70 @@
                   <i class="bi bi-star-fill"></i>
                 </span>
               </div>
-              <div class="col-card">
+              <div class="modal-icon">
                 <i class="bi bi-heart"></i>
-                <h1>&#8377;08</h1>
+                <i class="bi bi-share"></i>
               </div>
             </div>
           </div>
-
-          <div class="modal-dialog modal-one hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-one.png" alt="" />
+          <div class="modal-right">
+            <div class="description">
+              <div>
+                <h1>Description</h1>
+                <p>
+                  Syngonium podophyllum, commonly called arrowhead vine, is
+                  the only plant native from Mexico to Ecuador. Syngonium
+                  podophyllum, commonly called arrowhead vine, is the only
+                  plant native from Mexico to Ecuador. Readmore
+                </p>
               </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Arrowhead Plant</h1>
-                  <p>Syngonium Podophyllum</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
+              <div class="close-btn">
+                <button type="button" id="closeBtn">
+                  <i class="bi bi-x-lg"></i>
+                </button>
               </div>
             </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    Syngonium podophyllum, commonly called arrowhead vine, is
-                    the only plant native from Mexico to Ecuador. Syngonium
-                    podophyllum, commonly called arrowhead vine, is the only
-                    plant native from Mexico to Ecuador. Readmore
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
+            <div class="plant-type">
+              <div class="type-card">
+                <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
+                <span>Easy</span>
               </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
+              <div class="type-card">
+                <h2>
+                  <img src="./asset/veterinary.svg" alt="" />Pet friendly
+                </h2>
+                <span>Yes</span>
               </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;20</h1>
+              <div class="type-card">
+                <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
+                <span>No</span>
               </div>
-              <div class="buy-row">
-                <div class="count">
-                  <h5>Quantity</h5>
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
+              <div class="type-card">
+                <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
+                <span>Medium</span>
+              </div>
+            </div>
+            <div class="plant-price">
+              <h1 class="price-value">&#8377;08</h1>
+            </div>
+            <div class="buy-row">
+              <div class="count">
+                <input type="number" name="" id="countValue" value="1" />
+                <button type="button" id="increment">
+                  <i class="bi bi-plus-lg"></i>
+                </button>
+                <button type="button" id="decrement">
+                  <i class="bi bi-dash-lg"></i>
+                </button>
+              </div>
+              <div class="buy">
+                <button type="button" class="buy-btn btn">Add to Cart</button>
               </div>
             </div>
           </div>
-          <div class="modal-dialog modal-two hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-two.png" alt="" />
-              </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Peace Lily</h1>
-                  <p>Spathiphyllum</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
-              </div>
-            </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    Peace Lilies are not only aesthetically pleasing but also
-                    have air-purifying qualities. They thrive in low light
-                    conditions, making them a great choice for home or office
-                    environments
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
-              </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;15</h1>
-              </div>
-              <div class="buy-row">
-                <div class="count">
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-dialog modal-three hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-three.png" alt="" />
-              </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Fiddle Leaf Fig.</h1>
-                  <p>Ficus lyrata</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
-              </div>
-            </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    Syngonium podophyllum, commonly called arrowhead vine, is
-                    the only plant native from Mexico to Ecuador. Syngonium
-                    podophyllum, commonly called arrowhead vine, is the only
-                    plant native from Mexico to Ecuador. Readmore
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
-              </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;18</h1>
-              </div>
-              <div class="buy-row">
-                <div class="count">
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-dialog modal-four hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-four.png" alt="" />
-              </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Asparagaceae</h1>
-                  <p>Dracaena Trifasciata</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
-              </div>
-            </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    It is a popular indoor plant known for its large, glossy
-                    green leaves and distinctive lyre or fiddle-like shape.
-                    Ficus lyrata is native to western Africa but is cultivated
-                    worldwide as an ornamental plant.e
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
-              </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;17</h1>
-              </div>
-              <div class="buy-row">
-                <div class="count">
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-dialog modal-five hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-five.png" alt="" />
-              </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Golden Cane</h1>
-                  <p>Dypsis Lutescens</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
-              </div>
-            </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    Syngonium podophyllum, commonly called arrowhead vine, is
-                    the only plant native from Mexico to Ecuador. Syngonium
-                    podophyllum, commonly called arrowhead vine, is the only
-                    plant native from Mexico to Ecuador. Readmore
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
-              </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;14</h1>
-              </div>
-              <div class="buy-row">
-                <div class="count">
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-dialog modal-six hidden">
-            <div class="modal-left">
-              <span><img src="./asset/cart.svg" alt="" /></span>
-              <div class="modal-img">
-                <img src="./asset/plant-six.png" alt="" />
-              </div>
-              <div class="modal-row">
-                <div class="modal-name">
-                  <h1>Birds of Paradise</h1>
-                  <p>Strelitzia Nicolai</p>
-                  <span>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </span>
-                </div>
-                <div class="modal-icon">
-                  <i class="bi bi-heart"></i>
-                  <i class="bi bi-share"></i>
-                </div>
-              </div>
-            </div>
-            <div class="modal-right">
-              <div class="description">
-                <div>
-                  <h1>Description</h1>
-                  <p>
-                    Syngonium podophyllum, commonly called arrowhead vine, is
-                    the only plant native from Mexico to Ecuador. Syngonium
-                    podophyllum, commonly called arrowhead vine, is the only
-                    plant native from Mexico to Ecuador. Readmore
-                  </p>
-                </div>
-                <div class="close-btn">
-                  <button type="button" id="closeBtn">
-                    <i class="bi bi-x-lg"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="plant-type">
-                <div class="type-card">
-                  <h2><img src="./asset/1093327 1.svg" alt="" />Care Level</h2>
-                  <span>Easy</span>
-                </div>
-                <div class="type-card">
-                  <h2>
-                    <img src="./asset/veterinary.svg" alt="" />Pet friendly
-                  </h2>
-                  <span>Yes</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/non-toxic.svg" alt="" />Toxicity</h2>
-                  <span>No</span>
-                </div>
-                <div class="type-card">
-                  <h2><img src="./asset/water-drop.svg" alt="" />Water</h2>
-                  <span>Medium</span>
-                </div>
-              </div>
-              <div class="plant-price">
-                <h1 class="price-value">&#8377;08</h1>
-              </div>
-              <div class="buy-row">
-                <div class="count">
-                  <input type="number" name="" id="countValue" value="1" />
-                  <button type="button" id="increment">
-                    <i class="bi bi-plus-lg"></i>
-                  </button>
-                  <button type="button" id="decrement">
-                    <i class="bi bi-dash-lg"></i>
-                  </button>
-                </div>
-                <div class="buy">
-                  <button type="button" class="buy-btn btn">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal-dialog success-modal hidden">
-            <div
-              style="
+        </div>
+        <div class="modal-dialog success-modal hidden">
+          <div style="
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -842,194 +819,184 @@
                 justify-content: center;
                 text-align: center;
                 gap: 20px;
-              "
-              class="div"
-            >
-              <h1>Successfully Added to Cart</h1>
-              <p style="width: 50%; font-size: 20px">
-                Items saved to their cart so you can continue shopping, then
-                complete the checkout process later on in the process.
-              </p>
-              <button type="button" id="suc-close" class="btn">
-                Continue Shopping
-              </button>
-            </div>
+              " class="div">
+            <h1>Successfully Added to Cart</h1>
+            <p style="width: 50%; font-size: 20px">
+              Items saved to their cart so you can continue shopping, then
+              complete the checkout process later on in the process.
+            </p>
+            <button type="button" id="suc-close" class="btn">
+              Continue Shopping
+            </button>
           </div>
-          <div class="overlay hidden"></div>
         </div>
-        <button type="button" class="btn animate-down-up">See More</button>
+        <div class="overlay hidden"></div>
       </div>
-
-      <div class="swipe-container">
-        <p>OUR SHOP</p>
-        <h1>Here are the best seller from our varieties</h1>
-        <button class="btn">See all</button>
-        <div class="swiper-card">
-          <div class="swiper-1">
-            <img src="./asset/swipe1.png" alt="" srcset="" />
-            <div class="swiper-content">
-              <p>Fiddle-leaf fig</p>
-              <span>&#8377;80</span>
-            </div>
-          </div>
-          <div class="swiper-1">
-            <img src="./asset/swipe2.png" alt="" srcset="" />
-            <div class="swiper-content">
-              <p>Aloe vera</p>
-              <span>&#8377;165</span>
-            </div>
-          </div>
-          <div class="swiper-1">
-            <img src="./asset/swipe3.png" alt="" srcset="" />
-            <div class="swiper-content">
-              <p>Strelitzia nicolai</p>
-              <span>&#8377;11.99</span>
-            </div>
-          </div>
-          <div class="swiper-1">
-            <img src="./asset/swipe4.png" alt="" srcset="" />
-            <div class="swiper-content">
-              <p>Ficus microcarpa</p>
-              <span>&#8377;28</span>
-            </div>
-          </div>
-          <div class="swiper-1">
-            <img src="./asset/swipe1.png" alt="" srcset="" />
-            <div class="swiper-content">
-              <p>Ficus microcarpa</p>
-              <span>&#8377;28</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- accordian -->
-      <div class="accordian-container">
-        <h1 class="acc-head animate-on-scroll">Frequently Asked Questions</h1>
-        <p class="acc-p animate-on-scroll-right">
-          A frequently asked question (FAQ) is a question that is commonly asked
-          about a product, service, or website.
-        </p>
-        <div class="accordian">
-          <div class="accordian-item one animate-down-up active">
-            <div class="content">
-              <div class="accordian-header">
-                <h4>How often should I change my plant’s potting mix?</h4>
-              </div>
-              <div class="accordian-body">
-                <p>
-                  Small doses of nutrient-rich fertilizer during the growing
-                  season may also be enough to get your potting mix back in tip
-                  top shape.
-                </p>
-              </div>
-            </div>
-            <div class="accordian-btn">
-              <!-- <i class="bi bi-x-lg"></i> -->
-              <i class="bi bi-plus-lg"></i>
-            </div>
-          </div>
-          <div class="accordian-item two animate-down-up">
-            <div class="content">
-              <div class="accordian-header">
-                <h4>Why are there gnats flying around my plants?</h4>
-              </div>
-              <div class="accordian-body">
-                <p>
-                  These insects feed on the fungus. To lose the gnats, let your
-                  plant’s potting mix completely dry out and work-in to the top
-                  layer some diatomaceous earth.
-                </p>
-              </div>
-            </div>
-            <div class="accordian-btn">
-              <!-- <i class="bi bi-x-lg"></i> -->
-              <i class="bi bi-plus-lg"></i>
-            </div>
-          </div>
-          <div class="accordian-item three animate-down-up">
-            <div class="content">
-              <div class="accordian-header">
-                <h4>My flowers are falling off — is my plant dying?</h4>
-              </div>
-              <div class="accordian-body">
-                <p>
-                  No — flowers are just reproductive structures — they come and
-                  they go! They fall off when your plant is no longer feeling
-                  frisky.
-                </p>
-              </div>
-            </div>
-            <div class="accordian-btn">
-              <!-- <i class="bi bi-x-lg"></i> -->
-              <i class="bi bi-plus-lg"></i>
-            </div>
-          </div>
-          <div class="accordian-item four animate-down-up">
-            <div class="content">
-              <div class="accordian-header">
-                <h4>How do I know if my plant is happy in its new home?</h4>
-              </div>
-              <div class="accordian-body">
-                <p>
-                  Don’t be alarmed if a plant doesn’t grow right away or do
-                  much. It may be in a winter dormancy period.
-                </p>
-              </div>
-            </div>
-            <div class="accordian-btn">
-              <!-- <i class="bi bi-x-lg"></i> -->
-              <i class="bi bi-plus-lg"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer -->
-      <footer>
-        <div class="footer-row">
-          <div class="footer-logo">
-            <img src="./asset/logo.svg" alt="" />
-          </div>
-          <ul class="links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-          <ul class="social-links">
-            <li>
-              <a target="_blank" href="https://gitlab.com/users/sign_in"
-                ><i class="bi bi-gitlab"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.threads.net/?hl=en"
-                ><i class="bi bi-threads"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://x.com/i/flow/login"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://medium.com/"
-                ><i class="bi bi-medium"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-line"></div>
-        <div class="copyright">
-          Copyright © 2023 Plant bond | All Rights Reserved
-        </div>
-      </footer>
+      <button type="button" class="btn animate-down-up">See More</button>
     </div>
 
-    <script src="./main.js"></script>
+    <div class="swipe-container">
+      <p>OUR SHOP</p>
+      <h1>Here are the best seller from our varieties</h1>
+      <button class="btn">See all</button>
+      <div class="swiper-card">
+        <div class="swiper-1">
+          <img src="./asset/swipe1.png" alt="" srcset="" />
+          <div class="swiper-content">
+            <p>Fiddle-leaf fig</p>
+            <span>&#8377;80</span>
+          </div>
+        </div>
+        <div class="swiper-1">
+          <img src="./asset/swipe2.png" alt="" srcset="" />
+          <div class="swiper-content">
+            <p>Aloe vera</p>
+            <span>&#8377;165</span>
+          </div>
+        </div>
+        <div class="swiper-1">
+          <img src="./asset/swipe3.png" alt="" srcset="" />
+          <div class="swiper-content">
+            <p>Strelitzia nicolai</p>
+            <span>&#8377;11.99</span>
+          </div>
+        </div>
+        <div class="swiper-1">
+          <img src="./asset/swipe4.png" alt="" srcset="" />
+          <div class="swiper-content">
+            <p>Ficus microcarpa</p>
+            <span>&#8377;28</span>
+          </div>
+        </div>
+        <div class="swiper-1">
+          <img src="./asset/swipe1.png" alt="" srcset="" />
+          <div class="swiper-content">
+            <p>Ficus microcarpa</p>
+            <span>&#8377;28</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <!-- accordian -->
+    <div class="accordian-container">
+      <h1 class="acc-head animate-on-scroll">Frequently Asked Questions</h1>
+      <p class="acc-p animate-on-scroll-right">
+        A frequently asked question (FAQ) is a question that is commonly asked
+        about a product, service, or website.
+      </p>
+      <div class="accordian">
+        <div class="accordian-item one animate-down-up active">
+          <div class="content">
+            <div class="accordian-header">
+              <h4>How often should I change my plant’s potting mix?</h4>
+            </div>
+            <div class="accordian-body">
+              <p>
+                Small doses of nutrient-rich fertilizer during the growing
+                season may also be enough to get your potting mix back in tip
+                top shape.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-btn">
+            <!-- <i class="bi bi-x-lg"></i> -->
+            <i class="bi bi-plus-lg"></i>
+          </div>
+        </div>
+        <div class="accordian-item two animate-down-up">
+          <div class="content">
+            <div class="accordian-header">
+              <h4>Why are there gnats flying around my plants?</h4>
+            </div>
+            <div class="accordian-body">
+              <p>
+                These insects feed on the fungus. To lose the gnats, let your
+                plant’s potting mix completely dry out and work-in to the top
+                layer some diatomaceous earth.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-btn">
+            <!-- <i class="bi bi-x-lg"></i> -->
+            <i class="bi bi-plus-lg"></i>
+          </div>
+        </div>
+        <div class="accordian-item three animate-down-up">
+          <div class="content">
+            <div class="accordian-header">
+              <h4>My flowers are falling off — is my plant dying?</h4>
+            </div>
+            <div class="accordian-body">
+              <p>
+                No — flowers are just reproductive structures — they come and
+                they go! They fall off when your plant is no longer feeling
+                frisky.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-btn">
+            <!-- <i class="bi bi-x-lg"></i> -->
+            <i class="bi bi-plus-lg"></i>
+          </div>
+        </div>
+        <div class="accordian-item four animate-down-up">
+          <div class="content">
+            <div class="accordian-header">
+              <h4>How do I know if my plant is happy in its new home?</h4>
+            </div>
+            <div class="accordian-body">
+              <p>
+                Don’t be alarmed if a plant doesn’t grow right away or do
+                much. It may be in a winter dormancy period.
+              </p>
+            </div>
+          </div>
+          <div class="accordian-btn">
+            <!-- <i class="bi bi-x-lg"></i> -->
+            <i class="bi bi-plus-lg"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-row">
+        <div class="footer-logo">
+          <img src="./asset/logo.svg" alt="" />
+        </div>
+        <ul class="links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <ul class="social-links">
+          <li>
+            <a target="_blank" href="https://gitlab.com/users/sign_in"><i class="bi bi-gitlab"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.threads.net/?hl=en"><i class="bi bi-threads"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://x.com/i/flow/login"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://medium.com/"><i class="bi bi-medium"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-line"></div>
+      <div class="copyright">
+        Copyright © 2023 Plant bond | All Rights Reserved
+      </div>
+    </footer>
+  </div>
+
+  <script src="./main.js"></script>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

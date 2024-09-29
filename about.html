@@ -1,188 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Green Bond</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="shortcut icon" href="./asset/plant.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="container-fluid">
-      <!-- top container -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Bond</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="./asset/plant.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css" />
+</head>
 
-      <nav class="navbar">
-        <div class="nav-brand">
+<body>
+  <div class="container-fluid">
+    <!-- top container -->
+
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img src="./asset/logo.svg" alt="" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a class="active" href="./about.html">About</a></li>
+        <li>
+          <a class="dropdown">
+            <a onclick="myFunction()" class="dropbtn">
+              Resources <i class="bi bi-chevron-down"></i></a>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Fertilizers</a>
+              <a href="#">Saplings</a>
+              <a href="#">Tutorials</a>
+            </div>
+          </a>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav-icon">
+        <div class="line"></div>
+        <li>
+          <a href="" class="logbtn">Login</a>
+          <button id="navbtn" type="button">
+            <img src="./asset/Menu.svg" alt="" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- mobile nav -->
+    <ul class="mobile-nav">
+      <li><a class="active" href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="">Login</a></li>
+    </ul>
+    <div class="about-banner">
+      <h1>ABOUT US</h1>
+    </div>
+    <div class="about-blog">
+      <div class="about-left-blog">
+        <h2>Know More About Houseplant</h2>
+        <p>
+           Artfully displayed — enhance your home’s unique look and make it
+          feel healthier and more connected with nature.unique look and make
+          it.
+        </p>
+        <div class="row flow">
+          <a style="width: 200px; height: 50px; margin: 50px 0" id="blog-btn" target="_blank"
+            href="https://nurserylive.com/blogs/top-10-plants/the-peace-lily-nasas-little-air-purifying-superstar-dyoe-dys"
+            class="">
+            Our Blog <i class="bi bi-arrow-right"></i>
+          </a>
+          <a class="btn-out hidden">Read More</a>
+        </div>
+      </div>
+
+      <div class="interior-left about-right-blog">
+        <div class="row">
+          <img class="left-img" src="./asset/interior-one.png" alt="" />
+          <img class="left-img" src="./asset/interior-two.png" alt="" />
+        </div>
+        <div class="row">
+          <img class="bottom-img" src="./asset/interior-three.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="about-middle">
+      <div class="about-middle-container">
+        <h2>Start gardening and grow your Own plant!</h2>
+        <img src="./asset/aboutmiddlemiddle.png" alt="" />
+        <div class="lastmid">
+          <p>
+            Plants are as important as other accessories in the space.
+            Well-chosen plants 
+          </p>
+          <a style="width: 200px; height: 50px; margin: 50px 0" id="blog-btn" target="_blank"
+            href="https://nurserylive.com/blogs/top-10-plants/the-peace-lily-nasas-little-air-purifying-superstar-dyoe-dys"
+            class="">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="about-ship">
+      <div style="color: #7e2301" class="ship-container">
+        <h2 style="color: #7e2301">Free Shipping Services</h2>
+        <p style="color: #7e2301">*only for the same region</p>
+        <p style="margin-top: 20px" class="">
+          <img src="./asset/clarity_email-line.png" alt="" /><span style="margin-left: 20px; color: #7e2301"><a
+              style="text-decoration: none; color: #7e2301" href="mailto: plantbond@example.com">
+              plantbond@gmail.com
+            </a></span>
+        </p>
+        <p style="margin-top: 20px" class="">
+          <img src="./asset/clarity_phone-handset-line.png" alt="" /><span style="margin-left: 20px; color: #7e2301">
+            <a style="text-decoration: none; color: #7e2301" href="telto:+1234567890">(+91) 99952 45445</a></span>
+        </p>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="footer-row">
+        <div class="footer-logo">
           <img src="./asset/logo.svg" alt="" />
         </div>
-        <ul class="nav-links">
+        <ul class="links">
           <li><a href="./index.html">Home</a></li>
-          <li><a class="active" href="./about.html">About</a></li>
-          <li>
-            <a class="dropdown">
-              <a onclick="myFunction()" class="dropbtn">
-                Resources <i class="bi bi-chevron-down"></i
-              ></a>
-              <div id="myDropdown" class="dropdown-content">
-                <a href="#">Fertilizers</a>
-                <a href="#">Saplings</a>
-                <a href="#">Tutorials</a>
-              </div>
-            </a>
-          </li>
+          <li><a href="./about.html">About</a></li>
+
           <li><a href="./contact.html">Contact</a></li>
         </ul>
-        <ul class="nav-icon">
-          <div class="line"></div>
+        <ul class="social-links">
           <li>
-            <a href="" class="logbtn">Login</a>
-            <button id="navbtn" type="button">
-              <img src="./asset/Menu.svg" alt="" />
-            </button>
+            <a target="_blank" href="https://gitlab.com/users/sign_in"><i class="bi bi-gitlab"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.threads.net/?hl=en"><i class="bi bi-threads"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://x.com/i/flow/login"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li>
+            <a target="_blank" href="https://medium.com/"><i class="bi bi-medium"></i></a>
           </li>
         </ul>
-      </nav>
-      <!-- mobile nav -->
-      <ul class="mobile-nav">
-        <li><a class="active" href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
+      </div>
+      <div class="footer-line"></div>
+      <div class="copyright">
+        Copyright © 2023 Plant bond | All Rights Reserved
+      </div>
+    </footer>
+  </div>
 
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="">Login</a></li>
-      </ul>
-      <div class="about-banner">
-        <h1>ABOUT US</h1>
-      </div>
-      <div class="about-blog">
-        <div class="about-left-blog">
-          <h2>Know More About Houseplant</h2>
-          <p>
-             Artfully displayed — enhance your home’s unique look and make it
-            feel healthier and more connected with nature.unique look and make
-            it.
-          </p>
-          <div class="row flow">
-            <a
-              style="width: 200px; height: 50px; margin: 50px 0"
-              id="blog-btn"
-              target="_blank"
-              href="https://nurserylive.com/blogs/top-10-plants/the-peace-lily-nasas-little-air-purifying-superstar-dyoe-dys"
-              class=""
-            >
-              Our Blog <i class="bi bi-arrow-right"></i>
-            </a>
-            <a class="btn-out hidden">Read More</a>
-          </div>
-        </div>
+  <script src="./main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-        <div class="interior-left about-right-blog">
-          <div class="row">
-            <img class="left-img" src="./asset/interior-one.png" alt="" />
-            <img class="left-img" src="./asset/interior-two.png" alt="" />
-          </div>
-          <div class="row">
-            <img class="bottom-img" src="./asset/interior-three.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="about-middle">
-        <div class="about-middle-container">
-          <h2>Start gardening and grow your Own plant!</h2>
-          <img src="./asset/aboutmiddlemiddle.png" alt="" />
-          <div class="lastmid">
-            <p>
-              Plants are as important as other accessories in the space.
-              Well-chosen plants 
-            </p>
-            <a
-              style="width: 200px; height: 50px; margin: 50px 0"
-              id="blog-btn"
-              target="_blank"
-              href="https://nurserylive.com/blogs/top-10-plants/the-peace-lily-nasas-little-air-purifying-superstar-dyoe-dys"
-              class=""
-              >Read More</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="about-ship">
-        <div style="color: #7e2301" class="ship-container">
-          <h2 style="color: #7e2301">Free Shipping Services</h2>
-          <p style="color: #7e2301">*only for the same region</p>
-          <p style="margin-top: 20px" class="">
-            <img src="./asset/clarity_email-line.png" alt="" /><span
-              style="margin-left: 20px; color: #7e2301"
-              ><a
-                style="text-decoration: none; color: #7e2301"
-                href="mailto: plantbond@example.com"
-              >
-                plantbond@gmail.com
-              </a></span
-            >
-          </p>
-          <p style="margin-top: 20px" class="">
-            <img src="./asset/clarity_phone-handset-line.png" alt="" /><span
-              style="margin-left: 20px; color: #7e2301"
-            >
-              <a
-                style="text-decoration: none; color: #7e2301"
-                href="telto:+1234567890"
-                >(+91) 99952 45445</a
-              ></span
-            >
-          </p>
-        </div>
-      </div>
-      <!-- footer -->
-      <footer>
-        <div class="footer-row">
-          <div class="footer-logo">
-            <img src="./asset/logo.svg" alt="" />
-          </div>
-          <ul class="links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-          <ul class="social-links">
-            <li>
-              <a target="_blank" href="https://gitlab.com/users/sign_in"
-                ><i class="bi bi-gitlab"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.threads.net/?hl=en"
-                ><i class="bi bi-threads"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://x.com/i/flow/login"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-            </li>
-            <li>
-              <a target="_blank" href="https://medium.com/"
-                ><i class="bi bi-medium"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-line"></div>
-        <div class="copyright">
-          Copyright © 2023 Plant bond | All Rights Reserved
-        </div>
-      </footer>
-    </div>
-
-    <script src="./main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
 </html>
