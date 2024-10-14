@@ -104,8 +104,6 @@ li {
   font-weight: bold; /* Bold text for emphasis */
 }
 
-header {
-}
 .banner-container {
   width: 100%;
   height: 100vh;
@@ -320,7 +318,11 @@ li > a:hover {
   text-decoration: underline;
   font-weight: 400;
 }
-
+.activeBtn {
+  color: #244629;
+  text-decoration: underline;
+  font-weight: 400;
+}
 .content-col {
   width: 60%;
   height: inherit;
@@ -1046,6 +1048,7 @@ textarea {
 
 /* footer */
 footer {
+  margin-top: 50px;
   padding: 30px 100px;
 }
 

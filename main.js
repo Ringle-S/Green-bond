@@ -81,6 +81,7 @@ function loopThroughArrays(arrayOfArrays) {
   let currentIndex = 0;
   let currentArrayIndex = 0;
 
+  bannerBtn[0].classList.add("activeBtn");
   const intervalId = setInterval(() => {
     if (currentIndex >= arrayOfArrays[currentArrayIndex].length) {
       currentIndex = 0;
@@ -89,6 +90,12 @@ function loopThroughArrays(arrayOfArrays) {
       speciesDesc.innerHTML = arrayOfArrays[currentArrayIndex][1];
       speciesCount.innerHTML = arrayOfArrays[currentArrayIndex][2];
       buyerCount.innerHTML = arrayOfArrays[currentArrayIndex][3];
+      bannerBtn[0].classList.remove("activeBtn");
+      bannerBtn[1].classList.remove("activeBtn");
+      bannerBtn[2].classList.remove("activeBtn");
+      bannerBtn[3].classList.remove("activeBtn");
+      bannerBtn[4].classList.remove("activeBtn");
+      bannerBtn[currentArrayIndex].classList.add("activeBtn");
       imgDiv.setAttribute(
         "src",
         `./asset/${arrayOfArrays[currentArrayIndex][4]}`
